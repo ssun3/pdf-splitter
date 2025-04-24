@@ -41,3 +41,4 @@ coverage/
 
 # Windows thumbnail cache
 Thumbs.db
+.vercel

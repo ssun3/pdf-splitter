@@ -11,12 +11,9 @@ importers:
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
-      pyodide:
-        specifier: ^0.27.5
-        version: 0.27.5
     devDependencies:
       vite:
-        specifier: ^6.3.1
+        specifier: ^6.3.2
         version: 6.3.2
 
 packages:
@@ -332,10 +329,6 @@ packages:
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
-  pyodide@0.27.5:
-    resolution: {integrity: sha512-nXErpLzEdtQolt+sNQ/5mKuN9XTUwhxR2MRhRhZ6oDRGpYLXrOp5+kkTPGEwK+wn1ZA8+poNmoxKTj2sq/p9og==}
-    engines: {node: '>=18.0.0'}
-
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
 
@@ -402,18 +395,6 @@ packages:
       tsx:
         optional: true
       yaml:
-        optional: true
-
-  ws@8.18.1:
-    resolution: {integrity: sha512-RKW2aJZMXeMxVpnZ6bck+RswznaxmzdULiBr6KY7XkTnW8uvt0iT9H5DkHUChXrc+uurzwa0rVI16n/Xzjdz1w==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
         optional: true
 
 snapshots:
@@ -625,13 +606,6 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  pyodide@0.27.5:
-    dependencies:
-      ws: 8.18.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   readable-stream@2.3.8:
     dependencies:
       core-util-is: 1.0.3
@@ -695,5 +669,3 @@ snapshots:
       tinyglobby: 0.2.13
     optionalDependencies:
       fsevents: 2.3.3
-
-  ws@8.18.1: {}
