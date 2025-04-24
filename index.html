@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python PDF Splitter (WASM/Pyodide)</title>
+    <!-- The key change is here - point to the src directory -->
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.27.5/full/pyodide.js"></script>
+  </head>
+  <body>
+    <h1>Split PDF by Chapters</h1>
+
+    <!-- The Drop Zone -->
+    <div id="dropZone">
+      Drag & Drop PDF Here
+      <br />
+      or <br />
+      Click to Select File
+      <div id="fileName"></div>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="pdfInput" accept=".pdf" hidden />
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button id="zipButton" disabled>Download All as ZIP</button>
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <h2>Status / Output</h2>
+    <div id="output">
+      Drop or select a PDF file to begin. Pyodide (Python runtime) will load
+      first.
+    </div>
+
+    <h2>Download Files</h2>
+    <div id="downloads">(Split chapters and TOC files will appear here.)</div>
+  </body>
+</html>

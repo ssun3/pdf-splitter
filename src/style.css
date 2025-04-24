@@ -1,0 +1,91 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* Make drop zone clickable */
+#dropZone {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 20px;
+  cursor: pointer;
+  /* Indicate it's clickable */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Style for when dragging over */
+#dropZone.dragover {
+  border-color: #3498db;
+  background-color: #f0f8ff;
+  /* Light blue background */
+  color: #333;
+}
+
+/* Hide the actual file input */
+#pdfInput {
+  display: none;
+}
+
+#output,
+#downloads {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+}
+
+#output {
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#downloads a,
+#downloads p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: none;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+#fileName {
+  font-weight: bold;
+  margin-top: 5px;
+}
